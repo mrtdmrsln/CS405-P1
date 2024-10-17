@@ -144,13 +144,14 @@ void main() {
  */
 
 function getChatGPTModelViewMatrix() {
-    const transformationMatrix = new Float32Array([
-        0.17677669, -0.3061862, 0.3061862, 0.3,
-        0.3061862, 0.4330127, -0.17677669, -0.25,
-        -0.3061862, 0.17677669, 0.4330127, 0,
-        0, 0, 0, 1
 
+    const transformationMatrix = new Float32Array([
+        0.1767766922712326, -0.2866116464138031, 0.36959946155548096, 0.30000001192092896,
+        0.3061862289905548, 0.36959946155548096, 0.1401650458574295, -0.25,
+        -0.3535533845424652, 0.1767766922712326, 0.3061862289905548, 0.0,
+        0.0, 0.0, 0.0, 1.0
     ]);
+
     return getTransposeMatrix(transformationMatrix);
 }
 
@@ -187,7 +188,7 @@ function getModelViewMatrix() {
 
 
     
-    return getTransposeMatrix(modelViewMatrix);
+    return modelViewMatrix;
 }
 
 /**
